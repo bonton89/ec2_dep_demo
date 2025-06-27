@@ -31,7 +31,7 @@ from langchain.chains import RetrievalQA
 # bedrock_embeddings=BedrockEmbeddings(model_id="amazon.titan-embed-text-v2:0",client=bedrock)
 
 ## Bedrock Clients
-bedrock=boto3.client(service_name="bedrock-runtime")
+bedrock=boto3.client(service_name="bedrock-runtime",region_name='eu-north-1')
 bedrock_embeddings=BedrockEmbeddings(model_id="amazon.titan-embed-text-v2:0",client=bedrock)
 
 ## Data ingestion
